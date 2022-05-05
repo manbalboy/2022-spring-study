@@ -9,6 +9,7 @@ class MemberServiceTest {
     @Test
     void join() {
         Member member = new Member(1L, "memberA", Grade.VIP);
+
         memberService.join(member);
 
         Member findMember = memberService.findMember(1L);
