@@ -15,6 +15,9 @@ public class PrototypeTest {
 
     @Test
     void PrototypeBeanFind() {
+        /*
+            요청할때 마다 생성 PreDestroy 안먹음
+        */
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
 
         System.out.println("find prototypeBean");
@@ -31,7 +34,6 @@ public class PrototypeTest {
         assertThat(prototypeBean).isNotSameAs(prototypeBean2);
 
         ac.close();
-
     }
 
     @Scope("prototype")
