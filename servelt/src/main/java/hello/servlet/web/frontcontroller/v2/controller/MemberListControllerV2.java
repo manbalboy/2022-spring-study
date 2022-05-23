@@ -20,6 +20,6 @@ public class MemberListControllerV2 implements ControllerV2 {
 
         request.setAttribute("members", members);
 
-        return new MyView( "/WEB-INF/views/members.jsp");
+        return new MyView("/WEB-INF/views/members.jsp");
     }
 }
