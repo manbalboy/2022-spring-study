@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Map;
 
 public class MyView {
-    private String viewPath;
+    private final String viewPath;
 
 
     public MyView(String viewPath) {
@@ -28,7 +28,7 @@ public class MyView {
     }
 
     private void modelToRequestAttribute(Map<String, Object> model, HttpServletRequest req) {
-        model.forEach((key, value) -> req.setAttribute(key, value));
+        model.forEach(req::setAttribute);
     }
 }
 
